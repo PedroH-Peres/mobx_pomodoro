@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:mobx_pomodoro/pages/pomodoro.dart';
 import 'package:mobx_pomodoro/store/contador.store.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const Pomodoro(),
     );
   }
 }

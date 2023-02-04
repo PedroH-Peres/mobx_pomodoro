@@ -6,11 +6,15 @@ import 'package:flutter/src/widgets/framework.dart';
 class EntradaTempo extends StatelessWidget {
   final String titulo;
   final int valor;
+  final void Function()? inc;
+  final void Function()? dec;
 
   const EntradaTempo({
     super.key,
     required this.valor,
     required this.titulo,
+    this.inc,
+    this.dec
   });
 
   @override
@@ -31,7 +35,7 @@ class EntradaTempo extends StatelessWidget {
                   shape: CircleBorder(),
                   padding: EdgeInsets.all(15),
                   backgroundColor: Colors.red),
-              onPressed: () {},
+              onPressed: dec,
               child: Icon(
                 Icons.arrow_downward,
                 color: Colors.white,
@@ -46,7 +50,7 @@ class EntradaTempo extends StatelessWidget {
                     shape: CircleBorder(),
                     padding: EdgeInsets.all(15),
                     backgroundColor: Colors.red),
-                onPressed: () {},
+                onPressed: inc,
                 child: Icon(
                   Icons.arrow_upward,
                   color: Colors.white,
